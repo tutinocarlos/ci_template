@@ -29,7 +29,8 @@ issues, as well as missing features.
 Installation
 ************
 modificar del archivo config.pph
-$config['base_url'] con su url base
+$config['base_url'] con su url base.
+editar el archivo database.php com los datos de base de datos
 
 en la carpeta \sql se encuentra la estructura básica de base de datos
 usuario por defecto: admin@admin.com	
