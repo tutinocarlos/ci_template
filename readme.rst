@@ -28,7 +28,7 @@ issues, as well as missing features.
 ************
 Installation
 ************
-
+en la carpeta \sql se encuentra la estructura básica de base de datos
 usuario por defecto: admin@admin.com	
 password: password
 
