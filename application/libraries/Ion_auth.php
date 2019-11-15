@@ -376,6 +376,36 @@ class Ion_auth
 
 		return $this->ion_auth_model->in_group($admin_group, $id);
 	}
+	
+		public function is_super($id = FALSE)
+	{
+		$this->ion_auth_model->trigger_events('is_super');
+
+		$admin_group = $this->config->item('super_group', 'ion_auth');
+
+
+		return $this->ion_auth_model->in_group($admin_group, $id);
+	}
+	
+		public function is_marketing($id = FALSE)
+	{
+		$this->ion_auth_model->trigger_events('is_super');
+
+		$admin_group = $this->config->item('marketing_group', 'ion_auth');
+
+
+		return $this->ion_auth_model->in_group($admin_group, $id);
+	}
+	
+		public function is_ventas($id = FALSE)
+	{
+		$this->ion_auth_model->trigger_events('is_super');
+
+		$admin_group = $this->config->item('ventas_group', 'ion_auth');
+
+
+		return $this->ion_auth_model->in_group($admin_group, $id);
+	}
 
 	/**
 	 * Check the compatibility with the server

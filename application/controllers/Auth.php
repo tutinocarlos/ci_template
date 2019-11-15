@@ -109,14 +109,15 @@ class Auth extends MY_Controller
 				'id' => 'password',
 				'type' => 'password',
 			];
-			$this->data['css']=$this->css;
-			$this->data['script']=$this->script;
+			
+			$this->data['css_common']=$this->css_common;
+			
+			$this->data['script_common']=$this->script_common;
 
-			$this->load->view('web/head', $this->data);
+			$this->load->view('manager/head', $this->data);
 			$this->load->view('auth/login',$this->data);
-			$this->load->view('web/footer',$this->data);
+			$this->load->view('manager/footer',$this->data);
 
-//			$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'login', $this->data);
 		}
 	}
 
