@@ -28,6 +28,9 @@ issues, as well as missing features.
 ************
 Installation
 ************
+modificar del archivo config.pph
+$config['base_url'] con su url base
+
 en la carpeta \sql se encuentra la estructura básica de base de datos
 usuario por defecto: admin@admin.com	
 password: password
