@@ -29,6 +29,8 @@ issues, as well as missing features.
 Installation
 ************
 
+usuario por defecto: admin@admin.com	
+password: password
 
 *******
 License
