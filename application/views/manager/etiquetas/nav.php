@@ -1,5 +1,3 @@
-	
-	
 	<!-- Main navbar -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
@@ -55,7 +53,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-transparent border-warning text-warning rounded-round border-2 btn-icon"><i class="icon-git-commit"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										Add full font overrides for popovers and tooltips
 										<div class="text-muted font-size-sm">36 minutes ago</div>
@@ -66,7 +64,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-transparent border-info text-info rounded-round border-2 btn-icon"><i class="icon-git-branch"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										<a href="#">Chris Arney</a> created a new <span class="font-weight-semibold">Design</span> branch
 										<div class="text-muted font-size-sm">2 hours ago</div>
@@ -77,7 +75,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-transparent border-success text-success rounded-round border-2 btn-icon"><i class="icon-git-merge"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										<a href="#">Eugene Kopyov</a> merged <span class="font-weight-semibold">Master</span> and <span class="font-weight-semibold">Dev</span> branches
 										<div class="text-muted font-size-sm">Dec 18, 18:36</div>
@@ -88,7 +86,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-transparent border-primary text-primary rounded-round border-2 btn-icon"><i class="icon-git-pull-request"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										Have Carousel ignore keyboard events
 										<div class="text-muted font-size-sm">Dec 12, 05:46</div>
@@ -116,7 +114,7 @@
 						<i class="icon-people"></i>
 						<span class="d-md-none ml-2">Users</span>
 					</a>
-					
+
 					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-300">
 						<div class="dropdown-content-header">
 							<span class="font-weight-semibold">Users online</span>
@@ -195,7 +193,7 @@
 						<span class="d-md-none ml-2">Messages</span>
 						<span class="badge badge-pill bg-warning-400 ml-auto ml-md-0">2</span>
 					</a>
-					
+
 					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
 						<div class="dropdown-content-header">
 							<span class="font-weight-semibold">Messages</span>
@@ -281,7 +279,7 @@
 												<span class="text-muted float-right font-size-sm">Mon</span>
 											</a>
 										</div>
-										
+
 										<span class="text-muted">Other travelling salesmen live a life of luxury...</span>
 									</div>
 								</li>
@@ -313,10 +311,10 @@
 		</div>
 	</div>
 	<!-- /main navbar -->
-	
 
 
-<div class="page-content">
+
+	<div class="page-content">
 
 		<!-- Main sidebar -->
 		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
@@ -367,7 +365,26 @@
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
 
 						<!-- Main -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i>
+						</li>
+						<!-- usuarios -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Usuarios</div> <i class="icon-menu" title="usuarios"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-users4"></i> <span>Administrar Usuarios</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Basic usuarios">
+								<li class="nav-item"><a href="usuarios_modals.html" class="nav-link">Agregar</a></li>
+
+							</ul>
+							<ul class="nav nav-group-sub" data-submenu-title="Basic usuarios">
+								<li class="nav-item"><a href="<?= base_url('Manager/usuarios/listado')?>" class="nav-link">Listar</a></li>
+
+							</ul>
+						</li>
+
+						<!-- /usuarios -->
 						<li class="nav-item">
 							<a href="index.html" class="nav-link">
 								<i class="icon-home4"></i>
@@ -446,7 +463,9 @@
 						<!-- /main -->
 
 						<!-- Forms -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Forms</div> <i class="icon-menu" title="Forms"></i></li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Forms</div> <i class="icon-menu" title="Forms"></i>
+						</li>
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Form components</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form components">
@@ -502,20 +521,12 @@
 						</li>
 						<!-- /forms -->
 
-						<!-- Components -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Usuarios</div> <i class="icon-menu" title="Components"></i></li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-users4"></i> <span>Administrar Usuarios</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Basic components">
-								<li class="nav-item"><a href="components_modals.html" class="nav-link">Agregar</a></li>
-								
-							</ul>
-						</li>
 
-						<!-- /components -->
 
 						<!-- Layout -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Layout</div> <i class="icon-menu" title="Layout options"></i></li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Layout</div> <i class="icon-menu" title="Layout options"></i>
+						</li>
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-stack2"></i> <span>Page layouts</span></a>
 
@@ -680,7 +691,9 @@
 						<!-- /layout -->
 
 						<!-- Data visualization -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Data visualization</div> <i class="icon-menu" title="Data visualization"></i></li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Data visualization</div> <i class="icon-menu" title="Data visualization"></i>
+						</li>
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-graph"></i> <span>Echarts library</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="ECharts library">
@@ -747,7 +760,9 @@
 						<!-- /data visualization -->
 
 						<!-- Extensions -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Extensions</div> <i class="icon-menu" title="Extensions"></i></li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Extensions</div> <i class="icon-menu" title="Extensions"></i>
+						</li>
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-puzzle4"></i> <span>Extensions</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Extensions">
@@ -795,7 +810,9 @@
 						<!-- /extensions -->
 
 						<!-- Tables -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Tables</div> <i class="icon-menu" title="Tables"></i></li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Tables</div> <i class="icon-menu" title="Tables"></i>
+						</li>
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-table2"></i> <span>Basic tables</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Basic tables">
@@ -850,7 +867,9 @@
 						<!-- /tables -->
 
 						<!-- Page kits -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Page kits</div> <i class="icon-menu" title="Page kits"></i></li>
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Page kits</div> <i class="icon-menu" title="Page kits"></i>
+						</li>
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-grid6"></i> <span>General pages</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="General pages">
@@ -1019,7 +1038,7 @@
 
 			</div>
 			<!-- /sidebar content -->
-			
+
 		</div>
 		<!-- /main sidebar -->
 
@@ -1031,7 +1050,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Service Pages</span> - Sitemap</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold"><?= $page_title?></span> - <?= $page_datail?></h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -1047,9 +1066,9 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-							<a href="service_sitemap.html" class="breadcrumb-item">Service pages</a>
-							<span class="breadcrumb-item active">Sitemap</span>
+							<a href="/Manager" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Manager</a>
+							<a href="<?= $this->router->fetch_class()?>" class="breadcrumb-item"><?= $this->router->fetch_class();?></a>
+							<span class="breadcrumb-item active"><?= $this->router->fetch_method()?></span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>

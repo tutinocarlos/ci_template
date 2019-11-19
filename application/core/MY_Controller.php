@@ -6,6 +6,8 @@ class MY_controller extends CI_Controller {
  
     function __construct(){
     parent::__construct();
+			$this->page_title = 'CI_tempalte';
+			$this->page_datail = 'escturctura base';
 				$this->user = $this->ion_auth->user()->row();
 			
 				$fecha = date("Y-m-d");
@@ -30,7 +32,11 @@ class MY_controller extends CI_Controller {
 			
 			/*BARRA DE NAVEGACION Y FOOTER GLOBAL*/
 			
-			$data = array();
+			$data = array(
+				'script' => '',
+				'page_title' => 'CI_template',
+				'page_datail' => 'Administrador',
+			);
 			
 			$this->nav = $this->load->view('manager/etiquetas/nav', $data, TRUE);
 			
