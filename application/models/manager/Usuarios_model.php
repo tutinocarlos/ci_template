@@ -28,12 +28,27 @@ class Usuarios_model extends CI_Model
 					$estado = '<span class="badge badge-danger">inactivo</span>';
 				};
 				
+				$acciones = '<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown" aria-expanded="false">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(22px, 19px, 0px);">
+												<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+												<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+												<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+											</div>
+										</div>
+									</div>';
+				
 				 $datos[] = array(
 							$r->id,
 							$r->first_name,
 							$r->last_name,
 							$r->rol = $roles, 
 							$r->estado = $estado,
+							$r->acciones = $acciones,
 				 );
       }
 

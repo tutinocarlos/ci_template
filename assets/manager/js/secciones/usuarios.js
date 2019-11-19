@@ -3,6 +3,13 @@ $(document).ready(function () {
 	var base_url = $("body").data('base_url');
 
 	$('#usuarios_dt').DataTable({
+		 columnDefs: [
+    {
+			targets: -1,
+			className: 'dt-body-right',
+			bSortable: false,
+    }
+  ],
 		language: {
 			url: base_url + 'assets/manager/js/plugins/tables/translate/spanish.json'
 		},

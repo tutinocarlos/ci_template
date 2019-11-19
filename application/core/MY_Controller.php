@@ -14,20 +14,21 @@ class MY_controller extends CI_Controller {
 				$this->fecha = fecha_es($fecha, "L d F a"); //Resultado: dia 25 mes completo 2014
 			
 				$this->css_common = array(
-					base_url('assets/manager/css/icons/icomoon/styles.min.css'),
-					base_url('assets/manager/css/bootstrap.min.css'),
-					base_url('assets/manager/css/bootstrap_limitless.css'),
-					base_url('assets/manager/css/layout.css'),
-					base_url('assets/manager/css/components.css'),
-					base_url('assets/manager/css/colors.min.css'),
+					base_url('assets/manager/css/icons/icomoon/styles.min.css?ver='.time()),
+					base_url('assets/manager/css/bootstrap.min.css?ver='.time()),
+					base_url('assets/manager/css/bootstrap_limitless.css?ver='.time()),
+					base_url('assets/manager/css/layout.css?ver='.time()),
+					base_url('assets/manager/css/components.css?ver='.time()),
+					base_url('assets/manager/css/colors.min.css?ver='.time()),
 				);
 
 				
 				$this->script_common = array(
-					base_url('assets/manager/js/jquery.min.js'),
-					base_url('assets/manager/js/bootstrap.bundle.min.js'),
-					base_url('assets/manager/js/plugins/loaders/blockui.min.js'),
-					base_url('assets/manager/js/app.js'),
+					base_url('assets/manager/js/jquery.min.js?ver='.time()),
+					base_url('assets/manager/js/bootstrap.bundle.min.js?ver='.time()),
+					base_url('assets/manager/js/plugins/loaders/blockui.min.js?ver='.time()),
+					base_url('assets/manager/js/plugins/notifications/sweet_alert.min.js?ver='.time()),
+				
 				);	
 			
 			/*BARRA DE NAVEGACION Y FOOTER GLOBAL*/

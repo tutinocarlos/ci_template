@@ -1,6 +1,6 @@
 <div class="card">
 	<div class="card-header header-elements-inline">
-		<h5 class="card-title">Page length options</h5>
+		<h5 class="card-title">Usuarios Registrados</h5>
 		<div class="header-elements">
 			<div class="list-icons">
 				<a class="list-icons-item" data-action="collapse"></a>
@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<div class="card-body">
-		<div class="lookup-error">hola</div>
+		<div class="lookup-error"></div>
 		<table id="usuarios_dt" class="display">
 			<thead>
 				<tr>
@@ -19,6 +19,7 @@
 					<th>Apellido</th>
 					<th>Rol</th>
 					<th>Estado</th>
+					<th>Acciones</th>
 				</tr>
 			</thead>
 
