@@ -10,52 +10,175 @@
 		</div>
 	</div>
 
-	<div class="card-body">
-		<form action="<?= base_url('Manager/usuarios/agregar')?>" autocomplete="off" method="post">
 
-			<div class="row">
 
-				<div class="form-group col-sm-3 ">
-					<label>Nombre:</label>
-					<input name="nombre" type="text" class="form-control" placeholder="" value="<?= set_value('nombre')?>">
-					<?php echo form_error('nombre', '<div class="text-danger">', '</div>'); ?>
-				</div>
-				<div class="form-group col-sm-3 ">
-					<label>Apellido:</label>
-					<input name="apellido" type="text" class="form-control" placeholder="" value="<?= set_value('apellido')?>">
-					<?php echo form_error('apellido', '<div class="text-danger">', '</div>'); ?>
-				</div>
-				<div class="form-group col-sm-3 ">
-					<label>Email:</label>
-					<input name="email" type="email" class="form-control" placeholder="" value="<?= set_value('email')?>">
-					<?php echo form_error('email', '<div class="text-danger">', '</div>'); ?>
-				</div>
-				<div class="form-group col-sm-3 ">
-					<label>Usuario:</label>
-					<input name="username" type="text" class="form-control" placeholder="" value="<?= set_value('username')?>">
-					<?php echo form_error('username', '<div class="text-danger">', '</div>'); ?>
-				</div>
+<div class="content d-flex justify-content-left ">
+
+				<!-- Registration form -->
+				<form action="index.html" class="flex-fill">
+					<div class="row">
+						<div class="col-lg-6 ">
+							<div class="card mb-0">
+								<div class="card-body">
+									<div class="text-center mb-3">
+										<i class="icon-plus3 icon-2x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
+										<h5 class="mb-0">Crear Cuenta</h5>
+										<span class="d-block text-muted">Todos los campos son requeridos</span>
+									</div>
+
+									<div class="form-group form-group-feedback form-group-feedback-right">
+										<input type="text" class="form-control" placeholder="Nombre de Usuario">
+										<div class="form-control-feedback">
+											<i class="icon-user-plus text-muted"></i>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group form-group-feedback form-group-feedback-right">
+												<input type="text" class="form-control" placeholder="Nombre">
+												<div class="form-control-feedback">
+													<i class="icon-user-check text-muted"></i>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="form-group form-group-feedback form-group-feedback-right">
+												<input type="text" class="form-control" placeholder="Apellido">
+												<div class="form-control-feedback">
+													<i class="icon-user-check text-muted"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group form-group-feedback form-group-feedback-right">
+												<input type="password" class="form-control" placeholder="Password">
+												<div class="form-control-feedback">
+													<i class="icon-user-lock text-muted"></i>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="form-group form-group-feedback form-group-feedback-right">
+												<input type="password" class="form-control" placeholder="Repetir Password">
+												<div class="form-control-feedback">
+													<i class="icon-user-lock text-muted"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group form-group-feedback form-group-feedback-right">
+												<input type="email" class="form-control" placeholder="Email">
+												<div class="form-control-feedback">
+													<i class="icon-mention text-muted"></i>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="form-group form-group-feedback form-group-feedback-right">
+												<input type="email" class="form-control" placeholder="Repetir email">
+												<div class="form-control-feedback">
+													<i class="icon-mention text-muted"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="form-check">
+											<label class="form-check-label">
+												<div class=""><span ><input type="checkbox" class="form-input-styled"  data-fouc=""></span></div>
+												Send me <a href="#">test account settings</a>
+											</label>
+										</div>
+
+										<div class="form-check">
+											<label class="form-check-label">
+												<div class=""><span ><input type="checkbox" class="form-input-styled"  data-fouc=""  name="colorfavorito" value="rojo" id="rojo"></span></div>
+												Subscribe to monthly newsletter
+											</label>
+										</div>
+
+										<div class="form-check">
+											<label class="form-check-label">
+												<div class=""><span><input type="checkbox" id="grupo" class="form-input-styled" data-fouc=""></span></div>
+												Accept <a href="#">terms of service</a>
+											</label>
+										</div>
+									</div>
+
+									<button type="submit" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-plus3"></i></b> Crear Cuenta</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- /registration form -->
+
 			</div>
-			<div class="row">
 
 
-				<div class="form-group col-sm-3 ">
-					<label>Password:</label>
-					<input name="password" type="password" class="form-control" placeholder="" value="<?= set_value('password')?>">
-					<?php echo form_error('password', '<div class="text-danger">', '</div>'); ?>
-				</div>
-				
-				<div class="form-group col-sm-3 ">
-					<label>Confirmar Password:</label>
-					<input name="re-password" type="password" class="form-control" placeholder="" value="<?= set_value('re-password')?>">
-					<?php echo form_error('re-password', '<div class="text-danger">', '</div>'); ?>
-				</div>
-				
-			</div>
 
-			<div class="text-right">
-				<button type="submit" class="btn btn-primary">Enviar datos<i class="icon-paperplane ml-2"></i></button>
-			</div>
-		</form>
-	</div>
 </div>
+
+
+
+
+<script>
+	
+	
+	
+	$('#grupo').click(function() {
+		alert($(this).val());
+    
+  });
+	
+
+var LoginRegistration = function () {
+
+
+    //
+    // Setup module components
+    //
+
+    // Uniform
+    var _componentUniform = function() {
+        if (!$().uniform) {
+            console.warn('Warning - uniform.min.js is not loaded.');
+            return;
+        }
+
+        // Initialize
+        $('.form-input-styled').uniform();
+    };
+
+
+    //
+    // Return objects assigned to module
+    //
+
+    return {
+        initComponents: function() {
+            _componentUniform();
+        }
+    }
+}();
+
+
+// Initialize module
+// ------------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+    LoginRegistration.initComponents();
+});
+
+</script>

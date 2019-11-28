@@ -27,7 +27,9 @@ class MY_controller extends CI_Controller {
 					base_url('assets/manager/js/jquery.min.js?ver='.time()),
 					base_url('assets/manager/js/bootstrap.bundle.min.js?ver='.time()),
 					base_url('assets/manager/js/plugins/loaders/blockui.min.js?ver='.time()),
-					base_url('assets/manager/js/plugins/notifications/sweet_alert.min.js?ver='.time()),
+					base_url('assets/manager/js/plugins/forms/styling/uniform.min.js?ver='.time()),
+//					base_url('assets/manager/js/plugins/notifications/sweet_alert.min.js?ver='.time()),
+					base_url('assets/manager/js/app.js?ver='.time()),
 				
 				);	
 			

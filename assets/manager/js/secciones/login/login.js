@@ -1,12 +1,4 @@
-$(document).ready(function () {
-//Swal.fire(
-//  'Good job!',
-//  'You clicked the button!',
-//  'success'
-//)
-	
-	
-	/* ------------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------
  *
  *  # Login pages
  *
@@ -54,7 +46,4 @@ var LoginRegistration = function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     LoginRegistration.initComponents();
-});
-	
-	
 });

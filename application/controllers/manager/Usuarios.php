@@ -69,8 +69,9 @@ class Usuarios extends MY_Controller {
 //			base_url('assets/manager/js/plugins/forms/selects/select2.min.js?ver='.time()),
 //			base_url('assets/manager/js/plugins/forms/styling/uniform.min.js?ver='.time()),
 //			base_url('assets/manager/js/plugins/forms/form_layouts.js?ver='.time()),
-			base_url('assets/manager/js/secciones/abm_usuarios.js?ver='.time()),
-			base_url('assets/manager/js/app.js?ver='.time()),
+//			base_url('assets/manager/js/secciones/abm_usuarios.js?ver='.time()),
+//			base_url('assets/manager/js/secciones/login/login.js?ver='.time()),
+			base_url('assets/manager/js/secciones/login/login.js?ver='.time()),
 		);
 		
 		
