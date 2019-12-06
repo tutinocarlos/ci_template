@@ -11,7 +11,7 @@
 	</div>
 	<div class="card-body">
 		<div class="lookup-error"></div>
-		<table id="usuarios_dt" class="display">
+		<table id="usuarios_dt" class="datatable-basic dataTable no-footer">
 			<thead>
 				<tr>
 					<th>#</th>

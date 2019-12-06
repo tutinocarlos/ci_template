@@ -15,7 +15,12 @@
 <div class="content d-flex justify-content-left ">
 
 				<!-- Registration form -->
-				<form action="index.html" class="flex-fill">
+				
+				<?php 
+					$attributes = array('class' => 'flex-fill');
+					echo form_open('email/send', $attributes);
+				?>
+<!--				<form action="index.html" class="flex-fill">-->
 					<div class="row">
 						<div class="col-lg-6 ">
 							<div class="card mb-0">
@@ -94,34 +99,34 @@
 									</div>
 
 									<div class="form-group">
+										<h5 class="mb-0">Seleccione Grupo/s del usuario</h5>
+											<?php foreach($grupos as $data ):?>
 										<div class="form-check">
 											<label class="form-check-label">
-												<div class=""><span ><input type="checkbox" class="form-input-styled"  data-fouc=""></span></div>
-												Send me <a href="#">test account settings</a>
+												<div class="">
+												<span >
+												<input type="checkbox" class="form-input-styled"  data-fouc="" name="grupos[]" value="<?= $data->id?>">
+												</span>
+												</div>
+													<?= $data->description ?>
 											</label>
 										</div>
+											<?php endforeach; ?>
 
-										<div class="form-check">
-											<label class="form-check-label">
-												<div class=""><span ><input type="checkbox" class="form-input-styled"  data-fouc=""  name="colorfavorito" value="rojo" id="rojo"></span></div>
-												Subscribe to monthly newsletter
-											</label>
-										</div>
-
-										<div class="form-check">
-											<label class="form-check-label">
-												<div class=""><span><input type="checkbox" id="grupo" class="form-input-styled" data-fouc=""></span></div>
-												Accept <a href="#">terms of service</a>
-											</label>
-										</div>
 									</div>
+
 
 									<button type="submit" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-plus3"></i></b> Crear Cuenta</button>
 								</div>
 							</div>
 						</div>
 					</div>
-				</form>
+					
+					<?php 
+	
+						echo form_close();
+					?>
+<!--				</form>-->
 				<!-- /registration form -->
 
 			</div>

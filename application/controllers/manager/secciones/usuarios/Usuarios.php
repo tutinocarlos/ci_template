@@ -27,7 +27,7 @@ class Usuarios extends MY_Controller {
 			base_url('assets/manager/js/plugins/tables/datatables/datatables.js?ver='.time()),
 //			base_url('assets/manager/js/plugins/tables/datatables/datatables.min.js'),
 //			base_url('assets/manager/js/plugins/tables/datatables/datatables_advanced.js'),
-			base_url('assets/manager/js/plugins/selects/select2.min.js?ver='.time()),
+			base_url('assets/manager/js/plugins/forms/selects/select2.min.js?ver='.time()),
 			base_url('assets/manager/js/secciones/usuarios.js?ver='.time()),
 		);
 		
@@ -81,8 +81,14 @@ class Usuarios extends MY_Controller {
 		$this->data['script_common']= $this->script_common;
 		$this->data['script']= $script;
 
+		$this->data['grupos'] = $this->ion_auth->groups()->result();
 		
 		$this->data['content']= $this->load->view('manager/secciones/usuarios/agregar',$this->data,TRUE);
+		
+		
+		//danta enviada a la plantilla
+		
+//		var_dump($this->data['grupos'] );
 
 		$this->load->view('manager/head', $this->data);
 		$this->load->view('manager/index',$this->data);

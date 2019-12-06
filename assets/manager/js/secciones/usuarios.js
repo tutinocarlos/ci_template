@@ -17,7 +17,7 @@ $(document).ready(function () {
 		"type": "POST",
 		dataSrc: '',
 		ajax: {
-			url: base_url + 'Manager/Usuarios/list_usuarios_dt',
+			url: base_url + 'Manager/secciones/usuarios/usuarios/list_usuarios_dt',
 			type: 'POST',
 			error: function (jqXHR, textStatus, errorThrown) {
 				alert(jqXHR.status + textStatus + errorThrown);
