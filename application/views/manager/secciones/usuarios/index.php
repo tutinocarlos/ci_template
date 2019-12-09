@@ -10,7 +10,6 @@
 		</div>
 	</div>
 	<div class="card-body">
-		<div class="lookup-error">hola</div>
 		<table id="usuarios_dt" class="display">
 			<thead>
 				<tr>

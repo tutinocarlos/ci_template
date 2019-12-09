@@ -375,11 +375,11 @@
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-users4"></i> <span>Administrar Usuarios</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Basic usuarios">
-								<li class="nav-item"><a href="usuarios_modals.html" class="nav-link">Agregar</a></li>
+								<li class="nav-item"><a href="<?= base_url('Manager/usuarios/')?>" class="nav-link">Listado</a></li>
 
 							</ul>
 							<ul class="nav nav-group-sub" data-submenu-title="Basic usuarios">
-								<li class="nav-item"><a href="<?= base_url('Manager/usuarios/listado')?>" class="nav-link">Listar</a></li>
+								<li class="nav-item"><a href="<?= base_url('Manager/usuarios/agregar')?>" class="nav-link">Agregar</a></li>
 
 							</ul>
 						</li>
@@ -1066,7 +1066,7 @@
 				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
 					<div class="d-flex">
 						<div class="breadcrumb">
-							<a href="/Manager" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Manager</a>
+							<a href="" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Manager</a>
 							<a href="<?= $this->router->fetch_class()?>" class="breadcrumb-item"><?= $this->router->fetch_class();?></a>
 							<span class="breadcrumb-item active"><?= $this->router->fetch_method()?></span>
 						</div>
