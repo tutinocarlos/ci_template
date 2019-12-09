@@ -10,13 +10,15 @@
 		</div>
 	</div>
 	<div class="card-body">
-		<div class="lookup-error"></div>
-		<table id="usuarios_dt" class="datatable-basic dataTable no-footer">
+<!--		<table id="usuarios_dt" class="datatable-basic dataTable no-footer">-->
+	</div>
+		<table id="usuarios_dt" class="table datatable-show-all dataTable no-footer">
 			<thead>
 				<tr>
 					<th>#</th>
 					<th>Nombre</th>
 					<th>Apellido</th>
+					<th>Username</th>
 					<th>Rol</th>
 					<th>Estado</th>
 					<th>Acciones</th>
@@ -25,5 +27,4 @@
 
 		</table>
 
-	</div>
 </div>

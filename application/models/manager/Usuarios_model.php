@@ -46,6 +46,7 @@ class Usuarios_model extends CI_Model
 							$r->id,
 							$r->first_name,
 							$r->last_name,
+							$r->username,
 							$r->rol = $roles, 
 							$r->estado = $estado,
 							$r->acciones = $acciones,

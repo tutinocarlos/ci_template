@@ -50,5 +50,30 @@ class MY_controller extends CI_Controller {
 		
 }
 
+class backend_controller extends MY_Controller {
+
+    public function __construct() {
+        parent::__construct();
+  			if (!$this->ion_auth->logged_in())
+				{
+					redirect('Login');
+				}else{
+						$this->load->helper(array('form', 'url'));
+						$this->load->model('/Manager/Usuarios_model');
+						$this->load->library('form_validation');
+					
+						$this->data['grupos'] = $this->ion_auth->groups()->result();
+				}
+    }
+}
+
+class front_controller extends MY_Controller {
+
+    public function __construct() {
+        parent::__construct();
+        // do something
+    }
+}
+
 
 ?>

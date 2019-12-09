@@ -1,3 +1,11 @@
+
+<?php 
+//echo 'acsascsac';
+
+//var_dump($_POST)
+
+?>
+
 <div class="card">
 	<div class="card-header header-elements-inline">
 		<h5 class="card-title">Alta Usuarios</h5>
@@ -10,180 +18,106 @@
 		</div>
 	</div>
 
-
-
-<div class="content d-flex justify-content-left ">
-
-				<!-- Registration form -->
-				
-				<?php 
-					$attributes = array('class' => 'flex-fill');
-					echo form_open('email/send', $attributes);
-				?>
-<!--				<form action="index.html" class="flex-fill">-->
-					<div class="row">
-						<div class="col-lg-6 ">
-							<div class="card mb-0">
-								<div class="card-body">
-									<div class="text-center mb-3">
-										<i class="icon-plus3 icon-2x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
-										<h5 class="mb-0">Crear Cuenta</h5>
-										<span class="d-block text-muted">Todos los campos son requeridos</span>
-									</div>
-
-									<div class="form-group form-group-feedback form-group-feedback-right">
-										<input type="text" class="form-control" placeholder="Nombre de Usuario">
-										<div class="form-control-feedback">
-											<i class="icon-user-plus text-muted"></i>
-										</div>
-									</div>
-
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group form-group-feedback form-group-feedback-right">
-												<input type="text" class="form-control" placeholder="Nombre">
-												<div class="form-control-feedback">
-													<i class="icon-user-check text-muted"></i>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-md-6">
-											<div class="form-group form-group-feedback form-group-feedback-right">
-												<input type="text" class="form-control" placeholder="Apellido">
-												<div class="form-control-feedback">
-													<i class="icon-user-check text-muted"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group form-group-feedback form-group-feedback-right">
-												<input type="password" class="form-control" placeholder="Password">
-												<div class="form-control-feedback">
-													<i class="icon-user-lock text-muted"></i>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-md-6">
-											<div class="form-group form-group-feedback form-group-feedback-right">
-												<input type="password" class="form-control" placeholder="Repetir Password">
-												<div class="form-control-feedback">
-													<i class="icon-user-lock text-muted"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group form-group-feedback form-group-feedback-right">
-												<input type="email" class="form-control" placeholder="Email">
-												<div class="form-control-feedback">
-													<i class="icon-mention text-muted"></i>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-md-6">
-											<div class="form-group form-group-feedback form-group-feedback-right">
-												<input type="email" class="form-control" placeholder="Repetir email">
-												<div class="form-control-feedback">
-													<i class="icon-mention text-muted"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<h5 class="mb-0">Seleccione Grupo/s del usuario</h5>
-											<?php foreach($grupos as $data ):?>
-										<div class="form-check">
-											<label class="form-check-label">
-												<div class="">
-												<span >
-												<input type="checkbox" class="form-input-styled"  data-fouc="" name="grupos[]" value="<?= $data->id?>">
-												</span>
-												</div>
-													<?= $data->description ?>
-											</label>
-										</div>
-											<?php endforeach; ?>
-
-									</div>
-
-
-									<button type="submit" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-plus3"></i></b> Crear Cuenta</button>
-								</div>
-							</div>
-						</div>
+	<div class="card-body">
+		<!--
+		<div class="text-center mb-3">
+			<i class="icon-plus3 icon-2x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
+			<h5 class="mb-0">Create account</h5>
+			<span class="d-block text-muted">All fields are required</span>
+		</div>
+-->
+		<?php echo  form_open('Manager/usuarios/agregar');?>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group form-group-feedback form-group-feedback-right">
+					<input type="text" class="form-control" placeholder=" username" name="username"  value="<?php echo set_value('username'); ?>">
+					<div class="form-control-feedback">
+						<i class="icon-user-plus text-muted"></i>
 					</div>
-					
-					<?php 
-	
-						echo form_close();
-					?>
-<!--				</form>-->
-				<!-- /registration form -->
-
+					<?php echo form_error('username','<div class="invalid-feedback" style="display:block;">',"</div>");?>
+				</div>
 			</div>
 
+			<div class="col-md-6">
+				<div class="form-group form-group-feedback form-group-feedback-right">
+					<input type="email" class="form-control" placeholder="email" name="email"  value="<?php echo set_value('email'); ?>">
+					<div class="form-control-feedback">
+						<i class="icon-mention text-muted"></i>
+					</div>
+					<?php echo form_error('email','<div class="invalid-feedback" style="display:block;">',"</div>");?>
+				</div>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group form-group-feedback form-group-feedback-right">
+					<input type="text" class="form-control" placeholder="Nombre" name="first_name"  value="<?php echo set_value('first_name'); ?>">
+					<div class="form-control-feedback">
+						<i class="icon-user-check text-muted"></i>
+					</div>
+					<?php echo form_error('first_name','<div class="invalid-feedback" style="display:block;">',"</div>");?>
+				</div>
+			</div>
 
-</div>
+			<div class="col-md-6">
+				<div class="form-group form-group-feedback form-group-feedback-right">
+					<input type="text" class="form-control" placeholder="Apellido" name="last_name"  value="<?php echo set_value('last_name'); ?>">
+					<div class="form-control-feedback">
+						<i class="icon-user-check text-muted"></i>
+					</div>
+					<?php echo form_error('last_name','<div class="invalid-feedback" style="display:block;">',"</div>");?>
+				</div>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group form-group-feedback form-group-feedback-right">
+					<input type="password" class="form-control" placeholder="password" name="password">
+					<div class="form-control-feedback">
+						<i class="icon-user-lock text-muted"></i>
+					</div>
+					<?php echo form_error('password','<div class="invalid-feedback" style="display:block;">',"</div>");?>
+				</div>
+			</div>
 
+			<div class="col-md-6">
+				<div class="form-group form-group-feedback form-group-feedback-right">
+					<input type="password" class="form-control" placeholder="Password Confirmación" name="password_2">
+					<div class="form-control-feedback">
+						<i class="icon-user-lock text-muted"></i>
+					</div>
+					<?php echo form_error('password_2','<div class="invalid-feedback" style="display:block;">',"</div>");?>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<?php foreach($grupos as $grupo):?>
+			<div class="form-check">
+				<label class="form-check-label">
+					<div class="">
+						<span class="">
+							<?php 
+							$atributos=array(
+								'class' => 'form-input-styled',
+				
+							);
+							
 
+						echo form_checkbox('grupos[]', $grupo->id,set_checkbox('grupos',$grupo->id),$atributos);
+							?>
+							
+							<!--						<input type="checkbox" name="grupos[]" class="form-input-styled" data-fouc="">-->
+						</span>
+					</div>
+					<?= $grupo->description?>
+				</label>
+			</div>
+			<?php endforeach;?>
+			<?php echo form_error('grupos[]','<div class="invalid-feedback" style="display:block;">',"</div>");?>
+		</div>
 
-<script>
-	
-	
-	
-	$('#grupo').click(function() {
-		alert($(this).val());
-    
-  });
-	
-
-var LoginRegistration = function () {
-
-
-    //
-    // Setup module components
-    //
-
-    // Uniform
-    var _componentUniform = function() {
-        if (!$().uniform) {
-            console.warn('Warning - uniform.min.js is not loaded.');
-            return;
-        }
-
-        // Initialize
-        $('.form-input-styled').uniform();
-    };
-
-
-    //
-    // Return objects assigned to module
-    //
-
-    return {
-        initComponents: function() {
-            _componentUniform();
-        }
-    }
-}();
-
-
-// Initialize module
-// ------------------------------
-
-document.addEventListener('DOMContentLoaded', function() {
-    LoginRegistration.initComponents();
-});
-
-</script>
+		<button type="submit" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-plus3"></i></b> Crear Cuenta</button>
+		<?= form_close(); ?>
+	</div>

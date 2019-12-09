@@ -6,7 +6,7 @@ $(document).ready(function () {
 		 columnDefs: [
     {
 			targets: -1,
-			className: 'dt-body-right',
+//			className: 'dt-body-right',
 			bSortable: false,
     }
   ],
