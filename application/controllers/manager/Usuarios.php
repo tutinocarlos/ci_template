@@ -60,12 +60,12 @@ class Usuarios extends backend_controller {
 		$this->data['script']= $script;
 		
 		
-		$this->form_validation->set_rules('username', 'Username', 'required');
-		$this->form_validation->set_rules('first_name', 'Nombre', 'required');
-		$this->form_validation->set_rules('last_name', 'Apellido', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'required');
-		$this->form_validation->set_rules('password_2', 'Password Confirmación', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|callback_check_username');
+		$this->form_validation->set_rules('first_name', 'Nombre', 'trim|required');
+		$this->form_validation->set_rules('last_name', 'Apellido', 'trim|required');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required');
+		$this->form_validation->set_rules('password_2', 'Password Confirmación', 'trim|required');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required');
 		$this->form_validation->set_rules('grupos[]', 'Seleccione un Grupo', 'required');
 		if ($this->form_validation->run() == FALSE){
 			
@@ -83,6 +83,18 @@ class Usuarios extends backend_controller {
 		$this->load->view('manager/head', $this->data);
 		$this->load->view('manager/index',$this->data);
 		$this->load->view('manager/footer',$this->data);
+	}
+	
+	
+	
+	public function check_username($str){
+
+		if(!$this->ion_auth->username_check($str)){
+			return TRUE; 
+		}else{
+			$this->form_validation->set_message('check_username','El usuario ya se encuentra registrado');
+			return FALSE;
+		}
 	}
 }
 
