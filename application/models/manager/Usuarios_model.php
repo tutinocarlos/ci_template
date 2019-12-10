@@ -13,15 +13,17 @@ class Usuarios_model extends CI_Model
       $query = $this->db->select("*")->get('users');
 
       $datos = [];
-			$roles = '';
+		
       foreach($query->result() as $r) {
 				
 			 	$user_groups = $this->ion_auth->get_users_groups($r->id)->result();
 				
+//				var_dump($user_groups);
+				$roles = '';
 				foreach($user_groups as $data){
-					$roles .= '<span class="ml-1 badge badge-flat border-primary">'.$data->description.'</span>';
+					$roles .= '<span class="ml-1 badge badge-flat border-'.$data->color.' text-'.$data->color.'">'.$data->description.'</span>';
 				}
-				
+//				$user_groups ='';
 				if($r->active == '1'){
 					$estado = '<span class="badge badge-success">activo</span>';
 				}else{
