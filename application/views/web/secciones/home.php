@@ -7,6 +7,7 @@
 
 		<div class="jumbotron">
 			<h1 class="display-4">Plantilla Inicial Codeigniter - Ion Auth </h1>
+			<h2>-- 8</h2>
 			<p class="lead">PLantilla inicial CodeIgniter v3 integrado con IonAuth.</p>
 			<hr class="my-4">
 			<p></p>
