@@ -39,6 +39,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
 |
 */
+
+
 $autoload['packages'] = array();
 
 /*
@@ -133,3 +135,20 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array();
+
+
+
+/*
+* Load My own MY_Controllers
+*/
+function my_own_controllers($class) {
+  if (strpos($class, 'CI_') !== 0)
+  {
+    if (is_readable(APPPATH . 'core/' . $class . '.php'))
+    {
+      require_once(APPPATH . 'core/' . $class . '.php');
+    }
+  }
+}
+ 
+spl_autoload_register('my_own_controllers');

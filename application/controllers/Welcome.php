@@ -7,8 +7,8 @@ class Welcome extends MY_Controller {
 	{
 		
 		$data = array(
-				'css' => $this->css,
-				'script' => $this->script
+				'css_common' => $this->css_common,
+				'script_common' => $this->script_common
 		);
 
 		$this->load->view('web/head', $data);

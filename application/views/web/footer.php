@@ -1,7 +1,7 @@
 <?php
-		if(is_array ($script )){
+		if(is_array ($script_common )){
 
-			foreach($script as $data){
+			foreach($script_common as $data){
 
 				echo '<script src="'.$data.'"></script>';
 			}
