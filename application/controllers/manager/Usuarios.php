@@ -44,16 +44,14 @@ class Usuarios extends backend_controller {
 		$this->load->view('manager/footer',$this->data);
 	}
 
-
-
 	public function agregar(){
 		
-
-		$groups = array();
-		foreach($this->input->post('grupos') as $key=>$value){
-			array_push($groups,$value);
-		}
-
+		if (!empty($this->input->post('grupos'))){
+			$groups = array();
+			foreach($this->input->post('grupos') as $key=>$value){
+				array_push($groups,$value);
+			}
+		};
 		
 		$this->data['css_common']= $this->css_common;
 		$this->data['css']= '';
@@ -96,11 +94,7 @@ class Usuarios extends backend_controller {
 				
 			}
 
-		
-		
 	}
-	
-	
 	
 	
 	// functiones callback validacion de formularios
