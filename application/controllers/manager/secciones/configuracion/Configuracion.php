@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Usuarios extends backend_controller {
+class Configuracion extends backend_controller {
 	 function __construct(){
         parent::__construct();
 	 
@@ -20,7 +20,8 @@ class Usuarios extends backend_controller {
 		return $usuarios;
 	}
 
-	public function listados(){
+	public function index(){
+		
 		$script= array(
 			base_url('assets/manager/js/plugins/tables/datatables/datatables.js'),
 //			base_url('assets/manager/js/plugins/tables/datatables/datatables.min.js'),
@@ -37,12 +38,14 @@ class Usuarios extends backend_controller {
 		$this->data['script']= $script;
 
 		
-		$this->data['content']= $this->load->view('manager/secciones/usuarios/'.$this->router->fetch_method(),$this->data,TRUE);
+		$this->data['content']= $this->load->view('manager/secciones/configuracion/'.$this->router->fetch_method(),$this->data,TRUE);
 
 		$this->load->view('manager/head', $this->data);
 		$this->load->view('manager/index',$this->data);
 		$this->load->view('manager/footer',$this->data);
 	}
+
+
 
 	public function agregar(){
 		
@@ -68,8 +71,8 @@ class Usuarios extends backend_controller {
 		$this->form_validation->set_rules('password_2', 'Password Confirmación', 'trim|required|matches[password]');
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|callback_check_email');
 		$this->form_validation->set_rules('grupos[]', 'Seleccione un Grupo', 'required');
+		
 		if ($this->form_validation->run() == FALSE){
-		echo 45;
 			
 			$this->data['content']= $this->load->view('manager/secciones/usuarios/'.$this->router->fetch_method(),$this->data,TRUE);
 

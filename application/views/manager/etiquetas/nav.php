@@ -26,7 +26,7 @@
 				<li class="nav-item dropdown">
 					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
 						<i class="icon-git-compare"></i>
-						<span class="d-md-none ml-2">Git updates</span>
+						<span class="d-md-none ml-2"> Git updates</span>
 						<span class="badge badge-pill bg-warning-400 ml-auto ml-md-0">9</span>
 					</a>
 
@@ -345,7 +345,7 @@
 							</div>
 
 							<div class="media-body">
-								<div class="media-title font-weight-semibold"><?= $this->user->first_name.', '.$this->user->last_name; ?></div>
+								<div class="media-title font-weight-semibold">Victoria Baker</div>
 								<div class="font-size-xs opacity-50">
 									<i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA
 								</div>
@@ -363,46 +363,11 @@
 				<!-- Main navigation -->
 				<div class="card card-sidebar-mobile">
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<!-- Main -->
 						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Usuarios</div> <i class="icon-menu" title="usuarios"></i>
+							<div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i>
 						</li>
-
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-users4"></i> Usuarios y Roles</a>
-							<ul class="nav nav-group-sub">
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link"><i class="icon-users4"></i> Usuarios</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="<?= base_url('Manager/secciones/usuarios/usuarios/')?>" class="nav-link">Listar</a></li>
-										<li class="nav-item"><a href="<?= base_url('Manager/secciones/usuarios/usuarios/agregar')?>" class="nav-link">Agregar</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link"><i class="icon-users4"></i> Roles/Grupos</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="<?= base_url('Manager/secciones/usuarios/usuarios/')?>" class="nav-link">Listar</a></li>
-										<li class="nav-item"><a href="<?= base_url('Manager/secciones/usuarios/usuarios/agregar')?>" class="nav-link">Agregar</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<!-- usuarios -->
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-users4"></i> <span>Administrar Usuarios</span></a>
-
-							<ul class="nav nav-group-sub" data-submenu-title="Basic usuarios">
-								<li class="nav-item"><a href="<?= base_url('Manager/secciones/usuarios/usuarios/')?>" class="nav-link">Listar</a></li>
-
-							</ul>
-							<ul class="nav nav-group-sub" data-submenu-title="Basic usuarios">
-								<li class="nav-item"><a href="<?= base_url('Manager/secciones/usuarios/usuarios/agregar')?>" class="nav-link">Agregar</a></li>
-
-
-							</ul>
-
-						</li>
-
-						<!-- /usuarios -->
 						<li class="nav-item">
 							<a href="index.html" class="nav-link">
 								<i class="icon-home4"></i>
@@ -412,16 +377,13 @@
 								</span>
 							</a>
 						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Layouts</span></a>
+						<li class="nav-item nav-item-submenu" data-seccion="<?= $this->router->fetch_class();?>">
+							<a href="#" class="nav-link"><i class="icon-users"></i> <span>Usuarios</span></a>
 
-							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
-								<li class="nav-item"><a href="index.html" class="nav-link active">Default layout</a></li>
-								<li class="nav-item"><a href="../../../../layout_2/LTR/default/full/index.html" class="nav-link">Layout 2</a></li>
-								<li class="nav-item"><a href="../../../../layout_3/LTR/default/full/index.html" class="nav-link">Layout 3</a></li>
-								<li class="nav-item"><a href="../../../../layout_4/LTR/default/full/index.html" class="nav-link">Layout 4</a></li>
-								<li class="nav-item"><a href="../../../../layout_5/LTR/default/full/index.html" class="nav-link">Layout 5</a></li>
-								<li class="nav-item"><a href="../../../../layout_6/LTR/default/full/index.html" class="nav-link disabled">Layout 6 <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
+							<ul class="nav nav-group-sub" data-submenu-title="ABM Usuarios">
+								<li class="nav-item" data-seccion="listados"><a href="<?= base_url('Manager/usuarios/listados')?>" class="nav-link">Listados</a></li>
+								<li class="nav-item" data-seccion="agregar"><a href="<?= base_url('Manager/usuarios/agregar')?>" class="nav-link ">Altas</a></li>
+
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
@@ -430,7 +392,7 @@
 							<ul class="nav nav-group-sub" data-submenu-title="Themes">
 								<li class="nav-item"><a href="index.html" class="nav-link active">Default</a></li>
 								<li class="nav-item"><a href="../../../LTR/material/full/index.html" class="nav-link">Material</a></li>
-								<li class="nav-item"><a href="../../../LTR/dark/full/index.html" class="nav-link">Dark</a></li>
+								<li class="nav-item"><a href="../../../LTR/dark/full/index.html" class="nav-link disabled">Dark <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
 								<li class="nav-item"><a href="../../../LTR/clean/full/index.html" class="nav-link disabled">Clean <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
 							</ul>
 						</li>
@@ -470,76 +432,8 @@
 								<li class="nav-item"><a href="../seed/layout_fixed.html" class="nav-link">Fixed layout</a></li>
 							</ul>
 						</li>
-						<li class="nav-item">
-							<a href="changelog.html" class="nav-link">
-								<i class="icon-list-unordered"></i>
-								<span>Changelog</span>
-								<span class="badge bg-blue-400 align-self-center ml-auto">2.3</span>
-							</a>
-						</li>
 						<li class="nav-item"><a href="../../../RTL/default/full/index.html" class="nav-link"><i class="icon-width"></i> <span>RTL version</span></a></li>
 						<!-- /main -->
-
-						<!-- Forms -->
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Forms</div> <i class="icon-menu" title="Forms"></i>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Form components</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Form components">
-								<li class="nav-item"><a href="form_inputs.html" class="nav-link">Basic inputs</a></li>
-								<li class="nav-item"><a href="form_checkboxes_radios.html" class="nav-link">Checkboxes &amp; radios</a></li>
-								<li class="nav-item"><a href="form_select2.html" class="nav-link">Select2 selects</a></li>
-								<li class="nav-item"><a href="form_multiselect.html" class="nav-link">Bootstrap multiselect</a></li>
-								<li class="nav-item"><a href="form_input_groups.html" class="nav-link">Input groups</a></li>
-								<li class="nav-item"><a href="form_controls_extended.html" class="nav-link">Extended controls</a></li>
-								<li class="nav-item"><a href="form_floating_labels.html" class="nav-link">Floating labels</a></li>
-								<li class="nav-item"><a href="form_tag_inputs.html" class="nav-link">Tag inputs</a></li>
-								<li class="nav-item"><a href="form_dual_listboxes.html" class="nav-link">Dual Listboxes</a></li>
-								<li class="nav-item"><a href="form_validation.html" class="nav-link">Validation</a></li>
-								<li class="nav-item"><a href="form_wizard.html" class="nav-link">Form wizard</a></li>
-								<li class="nav-item"><a href="form_actions.html" class="nav-link">Form actions</a></li>
-								<li class="nav-item"><a href="form_inputs_grid.html" class="nav-link">Inputs grid</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-file-css"></i> <span>JSON forms</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="JSON forms">
-								<li class="nav-item"><a href="alpaca_basic.html" class="nav-link">Basic inputs</a></li>
-								<li class="nav-item"><a href="alpaca_advanced.html" class="nav-link">Advanced inputs</a></li>
-								<li class="nav-item"><a href="alpaca_controls.html" class="nav-link">Controls</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-spell-check"></i> <span>Text editors</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Text editors">
-								<li class="nav-item"><a href="editor_summernote.html" class="nav-link">Summernote editor</a></li>
-								<li class="nav-item"><a href="editor_ckeditor.html" class="nav-link">CKEditor</a></li>
-								<li class="nav-item"><a href="editor_trumbowyg.html" class="nav-link">Trumbowyg editor</a></li>
-								<li class="nav-item"><a href="editor_code.html" class="nav-link">Code editor</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-select2"></i> <span>Pickers</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Pickers">
-								<li class="nav-item"><a href="picker_date.html" class="nav-link">Date &amp; time pickers</a></li>
-								<li class="nav-item"><a href="picker_color.html" class="nav-link">Color pickers</a></li>
-								<li class="nav-item"><a href="picker_location.html" class="nav-link">Location pickers</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Form layouts</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Form layouts">
-								<li class="nav-item"><a href="form_layout_vertical.html" class="nav-link">Vertical form</a></li>
-								<li class="nav-item"><a href="form_layout_vertical_styled.html" class="nav-link disabled">Custom styles <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
-								<li class="nav-item-divider"></li>
-								<li class="nav-item"><a href="form_layout_horizontal.html" class="nav-link">Horizontal form</a></li>
-								<li class="nav-item"><a href="form_layout_horizontal_styled.html" class="nav-link disabled">Custom styles <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
-							</ul>
-						</li>
-						<!-- /forms -->
-
-
 
 						<!-- Layout -->
 						<li class="nav-item-header">
@@ -552,8 +446,9 @@
 								<li class="nav-item"><a href="layout_fixed_navbar.html" class="nav-link">Fixed navbar</a></li>
 								<li class="nav-item"><a href="layout_fixed_sidebar_custom.html" class="nav-link">Fixed sidebar - custom scroll</a></li>
 								<li class="nav-item"><a href="layout_fixed_sidebar_native.html" class="nav-link">Fixed sidebar - native scroll</a></li>
-								<li class="nav-item"><a href="layout_fixed_hideable_navbar.html" class="nav-link">Hideable navbar</a></li>
 								<li class="nav-item"><a href="layout_fixed_footer.html" class="nav-link">Fixed footer</a></li>
+								<li class="nav-item"><a href="layout_hideable_navbar.html" class="nav-link">Hideable navbar</a></li>
+								<li class="nav-item"><a href="layout_without_header.html" class="nav-link">Without page header</a></li>
 								<li class="nav-item-divider"></li>
 								<li class="nav-item"><a href="layout_boxed_default.html" class="nav-link">Boxed with default sidebar</a></li>
 								<li class="nav-item"><a href="layout_boxed_mini.html" class="nav-link">Boxed with mini sidebar</a></li>
@@ -562,6 +457,13 @@
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-page-break2"></i> <span>Headers &amp; footers</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Content styling">
+								<li class="nav-item"><a href="content_page_header.html" class="nav-link">Page header</a></li>
+								<li class="nav-item"><a href="content_page_footer.html" class="nav-link disabled">Page footer <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu nav-item-expanded ">
 							<a href="#" class="nav-link"><i class="icon-indent-decrease2"></i> <span>Sidebars</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Sidebars">
 								<li class="nav-item nav-item-submenu">
@@ -603,11 +505,11 @@
 										<li class="nav-item"><a href="sidebar_right_color_custom.html" class="nav-link">Custom color</a></li>
 									</ul>
 								</li>
-								<li class="nav-item nav-item-submenu">
+								<li class="nav-item nav-item-submenu nav-item-expanded">
 									<a href="#" class="nav-link">Content sidebar</a>
 									<ul class="nav nav-group-sub">
 										<li class="nav-item"><a href="sidebar_content_left.html" class="nav-link">Left position</a></li>
-										<li class="nav-item"><a href="sidebar_content_left_stretch.html" class="nav-link">Left stretched</a></li>
+										<li class="nav-item"><a href="sidebar_content_left_stretch.html" class="nav-link active">Left stretched</a></li>
 										<li class="nav-item"><a href="sidebar_content_left_hidden.html" class="nav-link">Left hidden</a></li>
 										<li class="nav-item"><a href="sidebar_content_right.html" class="nav-link">Right position</a></li>
 										<li class="nav-item"><a href="sidebar_content_right_stretch.html" class="nav-link">Right stretched</a></li>
@@ -708,348 +610,6 @@
 						</li>
 						<!-- /layout -->
 
-						<!-- Data visualization -->
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Data visualization</div> <i class="icon-menu" title="Data visualization"></i>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-graph"></i> <span>Echarts library</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="ECharts library">
-								<li class="nav-item"><a href="echarts_lines.html" class="nav-link">Line charts</a></li>
-								<li class="nav-item"><a href="echarts_areas.html" class="nav-link">Area charts</a></li>
-								<li class="nav-item"><a href="echarts_columns_waterfalls.html" class="nav-link">Columns and waterfalls</a></li>
-								<li class="nav-item"><a href="echarts_bars_tornados.html" class="nav-link">Bars and tornados</a></li>
-								<li class="nav-item"><a href="echarts_scatter.html" class="nav-link">Scatter charts</a></li>
-								<li class="nav-item"><a href="echarts_pies_donuts.html" class="nav-link">Pies and donuts</a></li>
-								<li class="nav-item"><a href="echarts_funnels_calendars.html" class="nav-link">Funnels and calendars</a></li>
-								<li class="nav-item"><a href="echarts_candlesticks_others.html" class="nav-link">Candlesticks and others</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-statistics"></i> <span>D3 library</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="D3 library">
-								<li class="nav-item"><a href="d3_lines_basic.html" class="nav-link">Simple lines</a></li>
-								<li class="nav-item"><a href="d3_lines_advanced.html" class="nav-link">Advanced lines</a></li>
-								<li class="nav-item"><a href="d3_bars_basic.html" class="nav-link">Simple bars</a></li>
-								<li class="nav-item"><a href="d3_bars_advanced.html" class="nav-link">Advanced bars</a></li>
-								<li class="nav-item"><a href="d3_pies.html" class="nav-link">Pie charts</a></li>
-								<li class="nav-item"><a href="d3_circle_diagrams.html" class="nav-link">Circle diagrams</a></li>
-								<li class="nav-item"><a href="d3_tree.html" class="nav-link">Tree layout</a></li>
-								<li class="nav-item"><a href="d3_other.html" class="nav-link">Other charts</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stats-bars"></i> <span>C3 library</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="C3 library">
-								<li class="nav-item"><a href="c3_lines_areas.html" class="nav-link">Lines and areas</a></li>
-								<li class="nav-item"><a href="c3_bars_pies.html" class="nav-link">Bars and pies</a></li>
-								<li class="nav-item"><a href="c3_advanced.html" class="nav-link">Advanced examples</a></li>
-								<li class="nav-item"><a href="c3_axis.html" class="nav-link">Chart axis</a></li>
-								<li class="nav-item"><a href="c3_grid.html" class="nav-link">Grid options</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-google"></i> <span>Google charts</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Google charts">
-								<li class="nav-item"><a href="google_lines.html" class="nav-link">Line charts</a></li>
-								<li class="nav-item"><a href="google_bars.html" class="nav-link">Bar charts</a></li>
-								<li class="nav-item"><a href="google_pies.html" class="nav-link">Pie charts</a></li>
-								<li class="nav-item"><a href="google_scatter_bubble.html" class="nav-link">Bubble &amp; scatter charts</a></li>
-								<li class="nav-item"><a href="google_other.html" class="nav-link">Other charts</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-map5"></i> <span>Maps integration</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Maps integration">
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Google maps</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="maps_google_basic.html" class="nav-link">Basics</a></li>
-										<li class="nav-item"><a href="maps_google_controls.html" class="nav-link">Controls</a></li>
-										<li class="nav-item"><a href="maps_google_markers.html" class="nav-link">Markers</a></li>
-										<li class="nav-item"><a href="maps_google_drawings.html" class="nav-link">Map drawings</a></li>
-										<li class="nav-item"><a href="maps_google_layers.html" class="nav-link ">Layers</a></li>
-									</ul>
-								</li>
-								<li class="nav-item"><a href="maps_vector.html" class="nav-link">Vector maps</a></li>
-								<li class="nav-item"><a href="maps_echarts.html" class="nav-link disabled">ECharts maps <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
-							</ul>
-						</li>
-						<!-- /data visualization -->
-
-						<!-- Extensions -->
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Extensions</div> <i class="icon-menu" title="Extensions"></i>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-puzzle4"></i> <span>Extensions</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Extensions">
-								<li class="nav-item"><a href="extension_image_cropper.html" class="nav-link">Image cropper</a></li>
-								<li class="nav-item"><a href="extension_blockui.html" class="nav-link">Block UI</a></li>
-								<li class="nav-item"><a href="extension_dnd.html" class="nav-link">Drag and drop</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-popout"></i> <span>JQuery UI</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="jQuery UI">
-								<li class="nav-item"><a href="jqueryui_interactions.html" class="nav-link">Interactions</a></li>
-								<li class="nav-item"><a href="jqueryui_forms.html" class="nav-link">Forms</a></li>
-								<li class="nav-item"><a href="jqueryui_components.html" class="nav-link">Components</a></li>
-								<li class="nav-item"><a href="jqueryui_sliders.html" class="nav-link">Sliders</a></li>
-								<li class="nav-item"><a href="jqueryui_navigation.html" class="nav-link">Navigation</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-upload"></i> <span>File uploaders</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="File uploaders">
-								<li class="nav-item"><a href="uploader_plupload.html" class="nav-link">Plupload</a></li>
-								<li class="nav-item"><a href="uploader_bootstrap.html" class="nav-link">Bootstrap file uploader</a></li>
-								<li class="nav-item"><a href="uploader_dropzone.html" class="nav-link">Dropzone</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-calendar3"></i> <span>Event calendars</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Event calendars">
-								<li class="nav-item"><a href="fullcalendar_views.html" class="nav-link">Basic views</a></li>
-								<li class="nav-item"><a href="fullcalendar_styling.html" class="nav-link">Event styling</a></li>
-								<li class="nav-item"><a href="fullcalendar_formats.html" class="nav-link">Language and time</a></li>
-								<li class="nav-item"><a href="fullcalendar_advanced.html" class="nav-link">Advanced usage</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-sphere"></i> <span>Internationalization</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Internationalization">
-								<li class="nav-item"><a href="internationalization_switch_direct.html" class="nav-link">Direct translation</a></li>
-								<li class="nav-item"><a href="internationalization_switch_query.html" class="nav-link">Querystring parameter</a></li>
-								<li class="nav-item"><a href="internationalization_fallback.html" class="nav-link">Language fallback</a></li>
-								<li class="nav-item"><a href="internationalization_callbacks.html" class="nav-link">Callbacks</a></li>
-							</ul>
-						</li>
-						<!-- /extensions -->
-
-						<!-- Tables -->
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Tables</div> <i class="icon-menu" title="Tables"></i>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-table2"></i> <span>Basic tables</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Basic tables">
-								<li class="nav-item"><a href="table_basic.html" class="nav-link">Basic examples</a></li>
-								<li class="nav-item"><a href="table_sizing.html" class="nav-link">Table sizing</a></li>
-								<li class="nav-item"><a href="table_borders.html" class="nav-link">Table borders</a></li>
-								<li class="nav-item"><a href="table_styling.html" class="nav-link">Table styling</a></li>
-								<li class="nav-item"><a href="table_elements.html" class="nav-link">Table elements</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-grid7"></i> <span>Data tables</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Data tables">
-								<li class="nav-item"><a href="datatable_basic.html" class="nav-link">Basic initialization</a></li>
-								<li class="nav-item"><a href="datatable_styling.html" class="nav-link">Basic styling</a></li>
-								<li class="nav-item"><a href="datatable_advanced.html" class="nav-link">Advanced examples</a></li>
-								<li class="nav-item"><a href="datatable_sorting.html" class="nav-link">Sorting options</a></li>
-								<li class="nav-item"><a href="datatable_api.html" class="nav-link">Using API</a></li>
-								<li class="nav-item"><a href="datatable_data_sources.html" class="nav-link">Data sources</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-alignment-unalign"></i> <span>Data tables extensions</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Data tables extensions">
-								<li class="nav-item"><a href="datatable_extension_reorder.html" class="nav-link">Columns reorder</a></li>
-								<li class="nav-item"><a href="datatable_extension_row_reorder.html" class="nav-link">Row reorder</a></li>
-								<li class="nav-item"><a href="datatable_extension_fixed_columns.html" class="nav-link">Fixed columns</a></li>
-								<li class="nav-item"><a href="datatable_extension_fixed_header.html" class="nav-link">Fixed header</a></li>
-								<li class="nav-item"><a href="datatable_extension_autofill.html" class="nav-link">Auto fill</a></li>
-								<li class="nav-item"><a href="datatable_extension_key_table.html" class="nav-link">Key table</a></li>
-								<li class="nav-item"><a href="datatable_extension_scroller.html" class="nav-link">Scroller</a></li>
-								<li class="nav-item"><a href="datatable_extension_select.html" class="nav-link">Select</a></li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Buttons</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="datatable_extension_buttons_init.html" class="nav-link">Initialization</a></li>
-										<li class="nav-item"><a href="datatable_extension_buttons_flash.html" class="nav-link">Flash buttons</a></li>
-										<li class="nav-item"><a href="datatable_extension_buttons_print.html" class="nav-link">Print buttons</a></li>
-										<li class="nav-item"><a href="datatable_extension_buttons_html5.html" class="nav-link">HTML5 buttons</a></li>
-									</ul>
-								</li>
-								<li class="nav-item"><a href="datatable_extension_colvis.html" class="nav-link">Columns visibility</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-versions"></i> <span>Responsive tables</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Responsive tables">
-								<li class="nav-item"><a href="table_responsive.html" class="nav-link">Responsive basic tables</a></li>
-								<li class="nav-item"><a href="datatable_responsive.html" class="nav-link">Responsive data tables</a></li>
-							</ul>
-						</li>
-						<!-- /tables -->
-
-						<!-- Page kits -->
-						<li class="nav-item-header">
-							<div class="text-uppercase font-size-xs line-height-xs">Page kits</div> <i class="icon-menu" title="Page kits"></i>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-grid6"></i> <span>General pages</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="General pages">
-								<li class="nav-item"><a href="general_feed.html" class="nav-link">Feed</a></li>
-								<li class="nav-item"><a href="general_embeds.html" class="nav-link">Embeds</a></li>
-								<li class="nav-item"><a href="general_faq.html" class="nav-link">FAQ page</a></li>
-								<li class="nav-item"><a href="general_knowledgebase.html" class="nav-link">Knowledgebase</a></li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Blog</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="blog_classic_v.html" class="nav-link">Classic vertical</a></li>
-										<li class="nav-item"><a href="blog_classic_h.html" class="nav-link">Classic horizontal</a></li>
-										<li class="nav-item"><a href="blog_grid.html" class="nav-link">Grid</a></li>
-										<li class="nav-item"><a href="blog_single.html" class="nav-link">Single post</a></li>
-										<li class="nav-item-divider"></li>
-										<li class="nav-item"><a href="blog_sidebar_left.html" class="nav-link">Left sidebar</a></li>
-										<li class="nav-item"><a href="blog_sidebar_right.html" class="nav-link">Right sidebar</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Timelines</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="timelines_left.html" class="nav-link">Left timeline</a></li>
-										<li class="nav-item"><a href="timelines_right.html" class="nav-link">Right timeline</a></li>
-										<li class="nav-item"><a href="timelines_center.html" class="nav-link">Centered timeline</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Gallery</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="gallery_grid.html" class="nav-link">Media grid</a></li>
-										<li class="nav-item"><a href="gallery_titles.html" class="nav-link">Media with titles</a></li>
-										<li class="nav-item"><a href="gallery_description.html" class="nav-link">Media with description</a></li>
-										<li class="nav-item"><a href="gallery_library.html" class="nav-link">Media library</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
-							<a href="#" class="nav-link"><i class="icon-wrench3"></i> <span>Service pages</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Service pages">
-								<li class="nav-item"><a href="service_sitemap.html" class="nav-link active">Sitemap</a></li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Invoicing</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="invoice_template.html" class="nav-link">Invoice template</a></li>
-										<li class="nav-item"><a href="invoice_grid.html" class="nav-link">Invoice grid</a></li>
-										<li class="nav-item"><a href="invoice_archive.html" class="nav-link">Invoice archive</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Authentication</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="login_simple.html" class="nav-link">Simple login</a></li>
-										<li class="nav-item"><a href="login_advanced.html" class="nav-link">More login info</a></li>
-										<li class="nav-item"><a href="login_registration.html" class="nav-link">Simple registration</a></li>
-										<li class="nav-item"><a href="login_registration_advanced.html" class="nav-link">More registration info</a></li>
-										<li class="nav-item"><a href="login_unlock.html" class="nav-link">Unlock user</a></li>
-										<li class="nav-item"><a href="login_password_recover.html" class="nav-link">Reset password</a></li>
-										<li class="nav-item"><a href="login_hide_navbar.html" class="nav-link">Hide navbar</a></li>
-										<li class="nav-item"><a href="login_transparent.html" class="nav-link">Transparent box</a></li>
-										<li class="nav-item"><a href="login_background.html" class="nav-link">Background option</a></li>
-										<li class="nav-item"><a href="login_validation.html" class="nav-link">With validation</a></li>
-										<li class="nav-item"><a href="login_tabbed.html" class="nav-link">Tabbed form</a></li>
-										<li class="nav-item"><a href="login_modals.html" class="nav-link">Inside modals</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Error pages</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="error_403.html" class="nav-link">Error 403</a></li>
-										<li class="nav-item"><a href="error_404.html" class="nav-link">Error 404</a></li>
-										<li class="nav-item"><a href="error_405.html" class="nav-link">Error 405</a></li>
-										<li class="nav-item"><a href="error_500.html" class="nav-link">Error 500</a></li>
-										<li class="nav-item"><a href="error_503.html" class="nav-link">Error 503</a></li>
-										<li class="nav-item"><a href="error_offline.html" class="nav-link">Offline page</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-people"></i> <span>User pages</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="User pages">
-								<li class="nav-item"><a href="user_pages_list.html" class="nav-link">User list</a></li>
-								<li class="nav-item"><a href="user_pages_cards.html" class="nav-link">User cards</a></li>
-								<li class="nav-item"><a href="user_pages_profile.html" class="nav-link">Simple profile</a></li>
-								<li class="nav-item"><a href="user_pages_profile_tabbed.html" class="nav-link">Tabbed profile</a></li>
-								<li class="nav-item"><a href="user_pages_profile_cover.html" class="nav-link">Profile with cover</a></li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-cube3"></i> <span>Application pages</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Application pages">
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Task manager</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="task_manager_grid.html" class="nav-link">Task grid</a></li>
-										<li class="nav-item"><a href="task_manager_list.html" class="nav-link">Task list</a></li>
-										<li class="nav-item"><a href="task_manager_detailed.html" class="nav-link">Task detailed</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Inbox</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="mail_list.html" class="nav-link">Mail list</a></li>
-										<li class="nav-item"><a href="mail_list_detached.html" class="nav-link">Mail list (detached)</a></li>
-										<li class="nav-item"><a href="mail_read.html" class="nav-link">Read mail</a></li>
-										<li class="nav-item"><a href="mail_write.html" class="nav-link">Write mail</a></li>
-										<li class="nav-item-divider"></li>
-										<li class="nav-item"><a href="chat_layouts.html" class="nav-link">Chat layouts</a></li>
-										<li class="nav-item"><a href="chat_options.html" class="nav-link">Chat options</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Search</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="search_basic.html" class="nav-link">Basic search results</a></li>
-										<li class="nav-item"><a href="search_users.html" class="nav-link">User search results</a></li>
-										<li class="nav-item"><a href="search_images.html" class="nav-link">Image search results</a></li>
-										<li class="nav-item"><a href="search_videos.html" class="nav-link">Video search results</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Job search</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="job_list_cards.html" class="nav-link">Cards view</a></li>
-										<li class="nav-item"><a href="job_list_list.html" class="nav-link">List view</a></li>
-										<li class="nav-item"><a href="job_detailed.html" class="nav-link">Job detailed</a></li>
-										<li class="nav-item"><a href="job_apply.html" class="nav-link">Apply</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Learning</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="learning_list.html" class="nav-link">List view</a></li>
-										<li class="nav-item"><a href="learning_grid.html" class="nav-link">Grid view</a></li>
-										<li class="nav-item"><a href="learning_detailed.html" class="nav-link">Detailed course</a></li>
-									</ul>
-								</li>
-								<li class="nav-item nav-item-submenu">
-									<a href="#" class="nav-link">Ecommerce set</a>
-									<ul class="nav nav-group-sub">
-										<li class="nav-item"><a href="ecommerce_product_list.html" class="nav-link">Product list</a></li>
-										<li class="nav-item"><a href="ecommerce_product_grid.html" class="nav-link">Product grid</a></li>
-										<li class="nav-item"><a href="ecommerce_orders_history.html" class="nav-link">Orders history</a></li>
-										<li class="nav-item"><a href="ecommerce_customers.html" class="nav-link">Customers</a></li>
-										<li class="nav-item"><a href="ecommerce_pricing.html" class="nav-link">Pricing tables</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-atom2"></i> <span>Widgets</span></a>
-							<ul class="nav nav-group-sub" data-submenu-title="Widgets">
-								<li class="nav-item"><a href="widgets_content.html" class="nav-link">Content widgets</a></li>
-								<li class="nav-item"><a href="widgets_stats.html" class="nav-link">Statistics widgets</a></li>
-								<li class="nav-item"><a href="widgets_menu.html" class="nav-link disabled">Menu widgets <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
-								<li class="nav-item"><a href="widgets_form.html" class="nav-link disabled">Form widgets <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
-							</ul>
-						</li>
-						<!-- /page kits -->
-
 					</ul>
 				</div>
 				<!-- /main navigation -->
@@ -1059,6 +619,8 @@
 
 		</div>
 		<!-- /main sidebar -->
+
+
 
 
 		<!-- Main content -->
@@ -1122,3 +684,11 @@
 				</div>
 			</div>
 			<!-- /page header -->
+			<?= $class_act?>
+			<?= $this->router->fetch_method()?>
+			<script>
+				var class_act = '<?= $class_act?>';
+				var method_act = '<?= $method_act?>';
+				//				alert(menu_act);
+
+			</script>

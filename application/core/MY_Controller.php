@@ -35,10 +35,13 @@ class MY_controller extends CI_Controller {
 			
 			/*BARRA DE NAVEGACION Y FOOTER GLOBAL*/
 			
+			$menu_act = $this->uri->segment(3);
 			$data = array(
 				'script' => '',
 				'page_title' => 'CI_template',
 				'page_datail' => 'Administrador',
+				'class_act' => $this->router->fetch_class(),
+				'method_act' => $this->router->fetch_method(),
 			);
 			
 			$this->nav = $this->load->view('manager/etiquetas/nav', $data, TRUE);
@@ -63,6 +66,8 @@ class backend_controller extends MY_Controller {
 						$this->load->library('form_validation');
 					
 						$this->data['grupos'] = $this->ion_auth->groups()->result();
+					
+					
 				}
     }
 }

@@ -26,7 +26,7 @@
 			<span class="d-block text-muted">All fields are required</span>
 		</div>
 -->
-		<?php echo  form_open('Manager/usuarios/agregar');?>
+		<?php echo  form_open(base_url('Manager/secciones/usuarios/agregar'));?>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form-group form-group-feedback form-group-feedback-right">

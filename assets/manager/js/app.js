@@ -1,3 +1,45 @@
+$(document).ready(function () {
+	var normalize = (function () {
+		var from = "ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç",
+			to = "AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc",
+			mapping = {};
+
+		for (var i = 0, j = from.length; i < j; i++)
+			mapping[from.charAt(i)] = to.charAt(i);
+
+		return function (str) {
+			var ret = [];
+			for (var i = 0, j = str.length; i < j; i++) {
+				var c = str.charAt(i);
+				if (mapping.hasOwnProperty(str.charAt(i)))
+					ret.push(mapping[c]);
+				else
+					ret.push(c);
+			}
+			return ret.join('');
+		}
+
+	})();
+
+	$('li.nav-item-submenu').each(function (index) {
+		var clase = $(this).data('seccion');
+
+
+		console.log(clase + class_act);
+		if (clase === class_act) {
+
+			$("li[data-seccion=" + clase + "]").addClass('nav-item-open'); //active para el submenu
+		$("li[data-seccion=" + clase + "] > ul li[data-seccion="+method_act+"]").addClass('nav-item-open'); //active para el submenu
+
+
+			//			$("li[data-seccion=" + seccion + "]" > "ul.nav-group-sub").css('color', 'red');
+			return;
+		}
+		//		console.log(index + ": " + $(this).html().toLowerCase());
+	});
+
+});
+
 /* ------------------------------------------------------------------------------
  *
  *  # Template JS core
